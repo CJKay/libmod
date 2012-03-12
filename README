@@ -1,7 +1,7 @@
 -- libmod --
 For information on usage, please visit http://libmod.wikia.com/wiki/Libmod_Wiki in your browser.
 
--- Installation --
+-- Building --
   -- Linux --
     To build release:
       make -f "Makefile.Linux" mode=release
@@ -13,3 +13,7 @@ For information on usage, please visit http://libmod.wikia.com/wiki/Libmod_Wiki 
       make -f "Makefile.Mingw32" mode=release
     To build debug:
       make -f "Makefile.Mingw32" mode=debug
+
+-- Installation --
+  There are currently no strict instructions on installation.
+  It is a good idea to place the build directory/prebuilt libraries somewhere permanent, and set your compiler to search for libraries in that directory (or if your compiler supports it, link the library by filename).
