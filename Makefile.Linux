@@ -23,9 +23,4 @@ clean:
 	rm -rf $(OBJS)$(C_DEPS) ./bin/libmod_linux.a
 	@echo ' '
 
-.PHONY: all clean dependents
-.SECONDARY:
-
-
-
--include ../makefile.targets
+.PHONY: all clean
