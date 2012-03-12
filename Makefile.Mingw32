@@ -1,0 +1,31 @@
+-include ./src/Makefile.Mingw32
+
+all: debug release
+
+# Tool invocations
+debug: $(OBJS)
+	@echo 'Building target: $@'
+	@echo 'Invoking: Mingw32 GCC Archiver'
+	mingw32-ar -r  "./bin/libmod_d_linux.a" $(OBJS)
+	@echo 'Finished building target: $@'
+	@echo ' '
+
+release: $(OBJS)
+	@echo 'Building target: $@'
+	@echo 'Invoking: GCC Archiver'
+	mingw32-ar -r  "./bin/libmod_linux.a" $(OBJS)
+	@echo 'Finished building target: $@'
+	@echo ' '
+
+# Other Targets
+clean:
+	mingw32-rm -rf $(OBJS)$(C_DEPS) ./bin/libmod_linux_d.a
+	mingw32-rm -rf $(OBJS)$(C_DEPS) ./bin/libmod_linux.a
+	@echo ' '
+
+.PHONY: all clean dependents
+.SECONDARY:
+
+
+
+-include ../makefile.targets
