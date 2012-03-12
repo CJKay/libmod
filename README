@@ -2,5 +2,14 @@
 For information on usage, please visit http://libmod.wikia.com/wiki/Libmod_Wiki in your browser.
 
 -- Installation --
-  -- Linux, Mac and Windows (Mingw32/Cygwin) --
-    make [all|release|debug]
+  -- Linux --
+    To build release:
+      make -f "Makefile.Linux" mode=release
+    To build debug:
+      make -f "Makefile.Linux" mode=debug
+  
+  -- Windows (Mingw32/Cygwin) --
+    To build release:
+      make -f "Makefile.Mingw32" mode=release
+    To build debug:
+      make -f "Makefile.Mingw32" mode=debug
