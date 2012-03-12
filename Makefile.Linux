@@ -17,7 +17,7 @@ release: $(OBJS)
 	@echo ' '
 
 clean:
-	rm -rf $(OBJS)$(C_DEPS) ./bin/libmod_linux_d.a
+	rm -rf $(OBJS)$(C_DEPS) ./bin/libmod_d_linux.a
 	rm -rf $(OBJS)$(C_DEPS) ./bin/libmod_linux.a
 	@echo ' '
 
