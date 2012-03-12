@@ -3,7 +3,6 @@
 all: debug release
 
 debug: $(OBJS)
-	@mkdir ./bin/obj 2> /dev/null
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC Archiver'
 	ar -r  "./bin/libmod_d_mingw32.a" $(OBJS)
@@ -11,7 +10,6 @@ debug: $(OBJS)
 	@echo ' '
 
 release: $(OBJS)
-	@mkdir ./bin/obj 2> /dev/null
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC Archiver'
 	ar -r  "./bin/libmod_mingw32.a" $(OBJS)
