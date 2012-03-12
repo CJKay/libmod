@@ -4,21 +4,21 @@ all: debug release
 
 debug: $(OBJS)
 	@echo 'Building target: $@'
-	@echo 'Invoking: Mingw32 GCC Archiver'
-	mingw32-ar -r  "./bin/libmod_d_mingw32.a" $(OBJS)
+	@echo 'Invoking: GCC Archiver'
+	ar -r  "./bin/libmod_d_mingw32.a" $(OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 release: $(OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC Archiver'
-	mingw32-ar -r  "./bin/libmod_mingw32.a" $(OBJS)
+	ar -r  "./bin/libmod_mingw32.a" $(OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 clean:
-	mingw32-rm -rf $(OBJS)$(C_DEPS) ./bin/libmod_mingw32_d.a
-	mingw32-rm -rf $(OBJS)$(C_DEPS) ./bin/libmod_mingw32.a
+	rm -rf $(OBJS)$(C_DEPS) ./bin/libmod_d_mingw32.a
+	rm -rf $(OBJS)$(C_DEPS) ./bin/libmod_mingw32.a
 	@echo ' '
 
 .PHONY: all clean
