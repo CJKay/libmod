@@ -1,24 +1,27 @@
+ifeq ($(mode),release)
+	CFLAGS = -O3 -g0
+	OUT="./bin/libmod_mingw32.a"
+else
+	mode = debug
+	CFLAGS = -O0 -g3
+	OUT="./bin/libmod_d_mingw32.a"
+endif
+
 -include ./src/Makefile.Mingw32
 
-all: debug release
-
-debug: $(OBJS)
+all: cleanobjs $(OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC Archiver'
-	ar -r  "./bin/libmod_d_mingw32.a" $(OBJS)
+	ar -r $(OUT) $(OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-release: $(OBJS)
-	@echo 'Building target: $@'
-	@echo 'Invoking: GCC Archiver'
-	ar -r  "./bin/libmod_mingw32.a" $(OBJS)
-	@echo 'Finished building target: $@'
+cleanobjs:
+	rm -rf $(OBJS)
 	@echo ' '
 
 clean:
-	rm -rf $(OBJS)$(C_DEPS) ./bin/libmod_d_mingw32.a
-	rm -rf $(OBJS)$(C_DEPS) ./bin/libmod_mingw32.a
+	rm -rf $(OBJS)$(C_DEPS) ./bin/libmod_d_mingw32.a ./bin/libmod_mingw32.a
 	@echo ' '
 
 .PHONY: all clean
