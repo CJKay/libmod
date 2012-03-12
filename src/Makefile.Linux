@@ -16,8 +16,6 @@ C_DEPS += \
 ./bin/obj/libmod.d \
 ./bin/obj/module.d 
 
-
-# Each subdirectory must supply rules for building sources it contributes
 ./bin/obj/%.o: ./src/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C Compiler'
