@@ -1,0 +1,33 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+./src/error.c \
+./src/function.c \
+./src/libmod.c \
+./src/module.c 
+
+OBJS += \
+./bin/obj/error.o \
+./bin/obj/function.o \
+./bin/obj/libmod.o \
+./bin/obj/module.o 
+
+C_DEPS += \
+./bin/obj/error.d \
+./bin/obj/function.d \
+./bin/obj/libmod.d \
+./bin/obj/module.d 
+
+
+# Each subdirectory must supply rules for building sources it contributes
+./bin/obj/%.o: ./src/%.c
+	@echo 'Building file: $<'
+	@echo 'Invoking: GCC C Compiler'
+	gcc -O0 -g3 -Wall -c -fmessage-length=0 -std=c99 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+
