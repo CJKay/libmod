@@ -1,0 +1,20 @@
+OUT=../bin/application
+
+-include ./src/Makefile.Linux
+
+all: cleanobjs $(OBJS)
+	@echo 'Building target: $@'
+	@echo 'Invoking: GCC C Compiler'
+	gcc $(OBJS) -o $(OUT) -L../../../bin -lmod_d_linux -ldl
+	@echo 'Finished building target: $@'
+	@echo ' '
+
+cleanobjs:
+	rm -rf $(OBJS)
+	@echo ' '
+
+clean:
+	rm -rf $(OBJS)$(C_DEPS) $(OUT)
+	@echo ' '
+
+.PHONY: all clean

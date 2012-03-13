@@ -1,0 +1,15 @@
+C_SRCS += \
+./src/main.c
+
+OBJS += \
+../bin/obj/module/main.o
+
+C_DEPS += \
+../bin/obj/module/main.d
+
+../bin/obj/module/%.o: ./src/%.c
+	@echo 'Building file: $<'
+	@echo 'Invoking: GCC C Compiler'
+	gcc -g3 -O3 -Wall -c -fPIC -fmessage-length=0 -std=c99 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
