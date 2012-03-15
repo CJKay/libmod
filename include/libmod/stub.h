@@ -7,6 +7,7 @@
 typedef struct libmod_stub {
 	const char *name;
 	const char *description;
+	void *context;
 
 	libmod_version_t version;
 	libmod_exports_t exports;
