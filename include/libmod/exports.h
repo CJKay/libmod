@@ -11,4 +11,4 @@ typedef struct libmod_exports {
 	libmod_function_t functions[LIBMOD_MAXEXPORTS];
 } libmod_exports_t;
 
-#endif // LIBMOD_EXPORTS_H
+#endif /* LIBMOD_EXPORTS_H */

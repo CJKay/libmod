@@ -29,4 +29,4 @@ extern libmod_module_t *libmod_module_load(libmod_application_t *application, co
 extern libmod_error_t libmod_module_unload(libmod_application_t *application, libmod_module_t *module);
 extern libmod_module_t *libmod_module_fromfilename(libmod_application_t *application, const char *filename);
 
-#endif // LIBMOD_MODULE_H
+#endif /* LIBMOD_MODULE_H */

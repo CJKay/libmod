@@ -18,4 +18,4 @@
 extern int libmod_exit(int code);
 extern char *libmod_strdup(const char *src);
 
-#endif //LIBMOD_H
+#endif /* LIBMOD_H */

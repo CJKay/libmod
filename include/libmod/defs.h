@@ -19,4 +19,4 @@
 #	define LIBMOD_MAXEXPORTS 2<<15
 #endif
 
-#endif // LIBMOD_DEFS_H
+#endif /* LIBMOD_DEFS_H */

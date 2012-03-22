@@ -9,4 +9,4 @@ typedef struct libmod_application {
 	libmod_modules_t modules;
 } libmod_application_t;
 
-#endif // LIBMOD_APPLICATION_H
+#endif /* LIBMOD_APPLICATION_H */

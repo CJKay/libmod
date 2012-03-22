@@ -10,4 +10,4 @@ typedef struct libmod_modules {
 	libmod_module_t *module[LIBMOD_MAXMODULES];
 } libmod_modules_t;
 
-#endif // LIBMOD_MODULES_H
+#endif /* LIBMOD_MODULES_H */

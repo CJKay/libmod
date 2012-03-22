@@ -10,4 +10,4 @@ typedef struct libmod_version {
 	uint16_t build;
 } libmod_version_t;
 
-#endif // LIBMOD_VERSION_H
+#endif /* LIBMOD_VERSION_H */

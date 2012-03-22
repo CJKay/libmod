@@ -10,4 +10,4 @@ typedef struct libmod_stub libmod_stub_t;
 
 extern void *libmod_function_fromname(libmod_stub_t *stub, const char *name);
 
-#endif // LIBMOD_FUNCTION_H
+#endif /* LIBMOD_FUNCTION_H */

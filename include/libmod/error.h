@@ -20,4 +20,4 @@ extern const char *libmod_error_details(void);
 extern void __libmod_error_clear(void);
 extern libmod_error_t __libmod_error_setandret(libmod_error_t num, const char *str);
 
-#endif // LIBMOD_ERROR_H
+#endif /* LIBMOD_ERROR_H */

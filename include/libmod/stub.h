@@ -13,4 +13,4 @@ typedef struct libmod_stub {
 	libmod_exports_t exports;
 } libmod_stub_t;
 
-#endif // LIBMOD_STUB_H
+#endif /* LIBMOD_STUB_H */
