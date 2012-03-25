@@ -5,7 +5,7 @@
 #include "modules.h"
 
 typedef struct libmod_application {
-	const libmod_stub_t stub;
+	libmod_stub_t stub;
 	libmod_modules_t modules;
 } libmod_application_t;
 
