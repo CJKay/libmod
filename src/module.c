@@ -142,7 +142,7 @@ libmod_error_t libmod_module_unload(libmod_application_t *application, libmod_mo
 }
 
 libmod_module_t *libmod_module_fromfilename(libmod_application_t *application, const char *filename) {
-	uint64_t i;
+	unsigned int i;
 	for(i = 0; i < application->modules.count; i++) {
 		if(strcmp(application->modules.module[i]->filename, filename) == 0) {
 			return application->modules.module[i];
@@ -153,7 +153,7 @@ libmod_module_t *libmod_module_fromfilename(libmod_application_t *application, c
 }
 
 libmod_module_t *libmod_module_fromname(libmod_application_t *application, const char *filename) {
-	uint64_t i;
+	unsigned int i;
 	for(i = 0; i < application->modules.count; i++) {
 		if(strcmp(application->modules.module[i]->stub.name, filename) == 0) {
 			return application->modules.module[i];

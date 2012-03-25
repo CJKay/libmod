@@ -9,8 +9,8 @@ typedef struct libmod_stub {
 	const char *description;
 	void *context;
 
-	libmod_version_t version;
-	libmod_exports_t exports;
+	const libmod_version_t version;
+	const libmod_exports_t exports;
 } libmod_stub_t;
 
 #endif /* LIBMOD_STUB_H */

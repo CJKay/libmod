@@ -6,7 +6,7 @@
 typedef struct libmod_module libmod_module_t;
 
 typedef struct libmod_modules {
-	uint64_t count;
+	unsigned int count;
 	libmod_module_t *module[LIBMOD_MAXMODULES];
 } libmod_modules_t;
 

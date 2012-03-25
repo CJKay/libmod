@@ -3,7 +3,7 @@
 static libmod_error_t __libmod_errno;
 static const char *__libmod_errstr;
 
-const char *__libmod_error_strings[] = {
+const char * const __libmod_error_strings[] = {
 	[ENOERROR] = "No error",
 	[ENOHANDLE] = "Couldn't get handle for file",
 	[ECOULDNTCLOSE] = "Couldn't close handle for file",
@@ -19,7 +19,7 @@ libmod_error_t libmod_error_number(void) {
 	return __libmod_errno;
 }
 
-const char *libmod_error_string(libmod_error_t error) {
+const char * const libmod_error_string(libmod_error_t error) {
 	return __libmod_error_strings[error];
 }
 

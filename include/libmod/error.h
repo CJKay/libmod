@@ -14,7 +14,7 @@ typedef enum libmod_error {
 } libmod_error_t;
 
 extern libmod_error_t libmod_error_number(void);
-extern const char *libmod_error_string(libmod_error_t error);
+extern const char * const libmod_error_string(libmod_error_t error);
 extern const char *libmod_error_details(void);
 
 extern void __libmod_error_clear(void);

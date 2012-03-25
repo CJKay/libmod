@@ -10,7 +10,7 @@
 void *libmod_function_fromname(libmod_stub_t *stub, const char *name) {
 	assert(stub != NULL && name != NULL);
 
-	uint64_t i;
+	unsigned int i;
 	for(i = 0; i < stub->exports.count; i++) {
 		if(strcmp(stub->exports.functions[i].name, name) == 0)
 			return stub->exports.functions[i].address;
