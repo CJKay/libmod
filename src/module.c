@@ -81,13 +81,6 @@ libmod_module_t *__libmod_module_checkvalidity(libmod_module_handle_t handle) {
 		return NULL;
 	}
 
-	if(module->stub.exports.count == 0) {
-		__libmod_error_setandret(ENOMODULEEXPORTS, libmod_strdup(module->stub.name));
-		__libmod_module_closehandle(handle);
-
-		return NULL;
-	}
-
 	return module;
 }
 
